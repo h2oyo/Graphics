@@ -5,20 +5,15 @@
 #include "crendertiles.h"
 #include "Vertex.h"
 
-void test()
-{
-	glfwInit();
-	glfwTerminate();
-}
 
 Geomtry makeGemotry(const Vertex * verts, size_t vsize, const unsigned int * tris, size_t tsize)
 {
 	Geomtry retval;
 
 	// define the variables
-	glCreateBuffers(1,&retval.vbo); //store vertices
-	glCreateBuffers(1, &retval.ibo); // store indices
-	glCreateVertexArrays(1, &retval.vao); // store attribute infromotaion
+	glGenBuffers(1,&retval.vbo); //store vertices
+	glGenBuffers(1, &retval.ibo); // store indices
+	glGenVertexArrays(1, &retval.vao); // store attribute infromotaion
 
 
 
@@ -36,8 +31,8 @@ Geomtry makeGemotry(const Vertex * verts, size_t vsize, const unsigned int * tri
 		glEnableVertexAttribArray(1);
 
 		// index of the attribute, number of elements, type, normalized?, size of vertex, offset
-		glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0);
-		glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (const void*)16);
+		glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)Vertex::POSITION);
+		glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)Vertex::COLOR);
 
 
 	// unscope the variables
@@ -55,7 +50,7 @@ void freeGeometry(Geomtry &geo)
 	glDeleteBuffers(1, &geo.vbo);
 	glDeleteBuffers(1, &geo.ibo);
 	glDeleteVertexArrays(1, &geo.vao);
-	geo = { 0,0,0 };
+	geo = { 0,0,0,0 };
 }
 
 Shader makeShader(const char * vsource, const char * fsource)
@@ -66,8 +61,8 @@ Shader makeShader(const char * vsource, const char * fsource)
 	unsigned vs = glCreateShader(GL_VERTEX_SHADER);
 	unsigned fs = glCreateShader(GL_FRAGMENT_SHADER);
 	// initialize variables
-	glShaderSource(vs, 1, &vsource, NULL);
-	glShaderSource(fs, 1, &fsource, NULL);
+	glShaderSource(vs, 1, &vsource, 0);
+	glShaderSource(fs, 1, &fsource, 0);
 	// complie shaders
 	glCompileShader(vs);
 	glCompileShader(fs);
@@ -79,7 +74,7 @@ Shader makeShader(const char * vsource, const char * fsource)
 	glDeleteShader(vs);
 	glDeleteShader(fs);
 
-	return Shader();
+	return retval;
 }
 
 void freeShader(Shader &shader)
@@ -88,13 +83,13 @@ void freeShader(Shader &shader)
 	shader.handle = 0;
 }
 
-void draw(const Shader &shader, const Geomtry &geomtry)
+void draw(const Shader &shader, const Geomtry &geometry)
 {
 	glUseProgram(shader.handle);
 
 	//binding the VAO aslo binds the IBO (tri) and VOB (verts)
-	glBindVertexArray(geomtry.vao);
+	glBindVertexArray(geometry.vao);
 	//draw elements will draw the vertices that are currently bound using an array of indices
 	//IF an IBO IS BOUND, we dont need to provide any indices.
-	glDrawElements(GL_TRIANGLES, geomtry.size, GL_UNSIGNED_INT, 0);
+	glDrawElements(GL_TRIANGLES, geometry.size , GL_UNSIGNED_INT, 0);
 }

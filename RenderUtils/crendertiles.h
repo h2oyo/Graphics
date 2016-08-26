@@ -15,7 +15,7 @@ struct Geomtry
 
 Geomtry makeGemotry(const struct Vertex *verts, size_t vsize,
 	const unsigned int *tris, size_t tsize);
-void freeGemotry(Geomtry &);
+void freeGeometry(Geomtry &);
 struct  Shader
 {
 	unsigned handle;
