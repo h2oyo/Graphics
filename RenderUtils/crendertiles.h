@@ -1,8 +1,7 @@
 #pragma once
-void test();
 
 
-struct Geomtry
+struct Geometry
 {
 	unsigned vbo, ibo, vao, size;
 	//vertex buffer object : an array of vertices
@@ -13,16 +12,20 @@ struct Geomtry
 };
 
 
-Geomtry makeGemotry(const struct Vertex *verts, size_t vsize,
+Geometry makeGeometry(const struct Vertex *verts, size_t vsize,
 	const unsigned int *tris, size_t tsize);
-void freeGeometry(Geomtry &);
+void freeGeometry(Geometry &);
 struct  Shader
 {
 	unsigned handle;
 };
 
-Shader makeShader(const char *vscript, const char *fsource);
+Shader makeShader(const char *vsource, const char *fsource);
+
+Shader loadShader(const char *vpath, const char *fpath);
 
 void freeShader(Shader &);
 
-void draw(const Shader &, const Geomtry &);
+void draw(const Shader &, const Geometry &);
+void draw(const Shader &, const Geometry &, float time);
+Geometry loadOBJ(const char *path);
