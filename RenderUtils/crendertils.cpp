@@ -172,3 +172,23 @@ Geometry loadOBJ(const char *path)
 	// then we can call makeGeometry as per normal.
 	return retval;
 }
+
+void draw(const Shader &s, const Geometry &g,
+	const float M[16], const float V[16], const float P[16], float time)
+{
+	glEnable(GL_CULL_FACE);
+	glEnable(GL_DEPTH_TEST);
+	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+
+	glUseProgram(s.handle);
+	glBindVertexArray(g.vao);
+
+
+	glUniformMatrix4fv(0, 1, GL_FALSE, P);
+	glUniformMatrix4fv(1, 1, GL_FALSE, V);
+	glUniformMatrix4fv(2, 1, GL_FALSE, M);
+
+	glUniform1f(3, time);
+
+	glDrawElements(GL_TRIANGLES, g.size, GL_UNSIGNED_INT, 0);
+}
