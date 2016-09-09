@@ -1,13 +1,17 @@
 #pragma once
-
-struct  Vertex
+#include "glm\glm.hpp"
+struct Vertex
 {
-	float positon[4];
-	float color[4];
+	glm::vec4 position;
+	glm::vec4 color;
+	glm::vec4 normal;
+	glm::vec2 texcoord;
 
-	enum {
+	enum
+	{
 		POSITION = 0,
-		COLOR = 16
+		COLOR = 16,
+		NORMAL = 32,
+		TEXCOORD = 48,
 	};
-
 };

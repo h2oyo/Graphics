@@ -1,8 +1,8 @@
 #pragma once
 
 #define GLM_SWIZZLE
-#include "GLM\glm.hpp"
-#include "GLM\ext.hpp"
+#include "glm\glm.hpp"
+#include "glm\ext.hpp"
 
 class FlyCamera
 {
@@ -10,6 +10,7 @@ public:
 	glm::vec3 position;
 	glm::vec3 direction;
 
+	glm::mat4 transform;
 	//float azimuth, altitude;
 	// YAW is along the Y
 	// PITCH is along the X
@@ -43,7 +44,9 @@ public:
 
 	glm::mat4 getView()		  const
 	{
-		return glm::lookAt(position, position + direction, glm::vec3(0, 1, 0));
+
+		return glm::inverse(transform);
+		//return glm::lookAt(position, position + direction, glm::vec3(0, 1, 0));
 	}
 
 	glm::mat4 getProjection() const

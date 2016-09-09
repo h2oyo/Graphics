@@ -2,6 +2,15 @@
 #include "Timer.h"
 #include "Camera.h"
 
+//
+//void FlyCamera::lookAt(const glm::vec3 &target)
+//{
+//	//auto mat =
+//	//glm::lookAt(position, normalize(target - position), glm::vec3(0, 1, 0));
+//	direction = normalize(target - position);
+//
+//
+//}
 void FlyCamera::update(const Input &in, const Time &t)
 {
 	glm::vec3 moveDir = glm::vec3(0, 0, 0);

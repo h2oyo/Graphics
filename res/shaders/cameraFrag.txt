@@ -35,4 +35,6 @@ void main ()
 	}
 
 	//outColor = vPosition;
+
+	outColor.r = gl_FragCoord.z;
 }

@@ -1,0 +1,10 @@
+#version 430
+
+out vec4 outColor;
+
+in vec4 vNormal;
+
+void main()
+{
+	outColor = vNormal;
+}
