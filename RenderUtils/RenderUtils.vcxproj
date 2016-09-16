@@ -151,8 +151,13 @@
     <ClInclude Include="globjects.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="procgen.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Vertex.h" />
     <ClInclude Include="window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\res\shaders\phongFrag.glsl" />
+    <None Include="..\res\shaders\phongVert.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,4 +1,4 @@
-#include "GLFW\glfw3.h"
+#include "gldecs.h"
 #include "window.h"
 #include "Input.h"
 #include <cstdio>

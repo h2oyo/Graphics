@@ -37,7 +37,7 @@ int main()
 
 	gallery.loadObjectOBJ("SPHERE", "../res/models/sphere.obj");
 	gallery.loadObjectOBJ("CUBE", "../res/models/cube.obj");
-	float time = 0;
+//	float time = 0;
 
 	while (window.step())
 	{
