@@ -3,6 +3,7 @@
 #include "Input.h"
 #include "Vertex.h"
 
+
 #include "GLM\glm.hpp"
 #include "GLM\ext.hpp"
 
@@ -43,7 +44,7 @@ int main()
 
 	float time = 0;
 	while (window.step())
-	{
+	{/*
 		clearFramebuffer(frame);
 		input.step();
 
@@ -60,7 +61,7 @@ int main()
 		drawFB(post, quad, screen, glm::value_ptr(glm::mat4(time)),
 			glm::value_ptr(glm::mat4()),
 			glm::value_ptr(glm::mat4()),
-			frame.colors, frame.nColors);
+			frame.colors, frame.nColors);*/
 	}
 	freeFramebuffer(frame);
 	freeShader(shader);

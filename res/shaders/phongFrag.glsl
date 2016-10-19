@@ -10,8 +10,6 @@ layout(location = 5)uniform sampler2D normalMap;
 
 
 layout(location = 0)out vec4 outColor;
-layout(location = 1)out vec4 outDiffuse;
-layout(location = 2)out vec4 outSpecular;
 
 
 in vec3 vNormal;
@@ -42,8 +40,8 @@ void main()
 	vec4 mDC = texture(diffuseMap, UV);
 	vec4 mSC = texture(specularMap, UV);
 
-	outDiffuse  = mDC * lamb;
-	outSpecular = mSC * spec;
+	vec4 outDiffuse  = mDC * lamb;
+	vec4 outSpecular = mSC * spec;
 
 	vec4 ambient = mDC * .2;
 	outColor =  outDiffuse + outSpecular  + ambient;

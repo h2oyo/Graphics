@@ -18,6 +18,38 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="cameraFrag.glsl" />
+    <None Include="copy.frag" />
+    <None Include="copy.vert" />
+    <None Include="cube.frag" />
+    <None Include="cube.vert" />
+    <None Include="gpass.frag" />
+    <None Include="gpass.vert" />
+    <None Include="lpass.frag" />
+    <None Include="lpass.vert" />
+    <None Include="phongFrag.glsl" />
+    <None Include="phongVert.glsl" />
+    <None Include="post.frag" />
+    <None Include="post.vert" />
+    <None Include="postFrag.glsl" />
+    <None Include="postVert.glsl" />
+    <None Include="quad.frag" />
+    <None Include="quad.vert" />
+    <None Include="simple.frag" />
+    <None Include="simple.vert" />
+    <None Include="spass.frag" />
+    <None Include="spass.vert" />
+    <None Include="ssao.frag" />
+    <None Include="ssao.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="cameraVert.txt" />
+    <Text Include="simpleFrag.txt" />
+    <Text Include="simpleVert.txt" />
+    <Text Include="textureFrag.txt" />
+    <Text Include="textureVert.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{8484D28D-43AF-419D-A076-2B26C4B41681}</ProjectGuid>
     <RootNamespace>Shaders</RootNamespace>
@@ -109,14 +141,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <None Include="cameraFrag.glsl" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="cameraVert.txt" />
-    <Text Include="phongFrag.glsl" />
-    <Text Include="phongVert.glsl" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

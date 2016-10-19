@@ -137,8 +137,10 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="crendertils.cpp" />
     <ClCompile Include="Gallery.cpp" />
+    <ClCompile Include="gldraw.cpp" />
+    <ClCompile Include="glload.cpp" />
+    <ClCompile Include="glmake.cpp" />
     <ClCompile Include="Input.cpp" />
-    <ClCompile Include="procgen.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="window.cpp" />
   </ItemGroup>
@@ -148,6 +150,9 @@
     <ClInclude Include="crendertiles.h" />
     <ClInclude Include="Gallery.h" />
     <ClInclude Include="gldecs.h" />
+    <ClInclude Include="gldraw.h" />
+    <ClInclude Include="glload.h" />
+    <ClInclude Include="glmake.h" />
     <ClInclude Include="globjects.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="procgen.h" />

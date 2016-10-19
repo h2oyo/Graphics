@@ -23,4 +23,3 @@ void main()
 
 	//gl_Position.w = sin(cos((time + position.y)*2)*2+1)/10;
 }
-

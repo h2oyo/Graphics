@@ -15,11 +15,91 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="cameraFrag.glsl" />
+    <None Include="cameraFrag.glsl">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="gpass.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="gpass.vert">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="lpass.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="lpass.vert">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="phongFrag.glsl">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="phongVert.glsl">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="post.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="post.vert">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="postFrag.glsl">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="postVert.glsl">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="quad.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="quad.vert">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="simple.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="simple.vert">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="spass.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="spass.vert">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="copy.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="copy.vert">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="cube.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="cube.vert">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="ssao.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="ssao.vert">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="cameraVert.txt" />
-    <Text Include="phongVert.glsl" />
-    <Text Include="phongFrag.glsl" />
+    <Text Include="cameraVert.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="simpleFrag.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="simpleVert.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="textureFrag.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="textureVert.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

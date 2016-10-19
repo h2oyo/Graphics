@@ -1,5 +1,6 @@
 #include "Gallery.h"
-
+#include "glmake.h"
+#include "glload.h"
 bool Gallery::makeShader(const char * name, const char * vsource, const char * fsource)
 {
 	if (!shaders.count(std::string(name)) )

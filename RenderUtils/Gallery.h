@@ -2,7 +2,8 @@
 #include <string>
 #include <map>
 #include "crendertiles.h"
-
+#include "glload.h"
+#include "glmake.h"
 
 class Gallery
 {

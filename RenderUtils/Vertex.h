@@ -1,5 +1,7 @@
 #pragma once
-#include "glm\glm.hpp"
+
+#include "GLM\glm.hpp"
+
 struct Vertex
 {
 	glm::vec4 position;
@@ -15,3 +17,10 @@ struct Vertex
 		TEXCOORD = 48,
 	};
 };
+
+const Vertex  quad_verts[4] = { { { -1,-1, 0, 1 },{ 1,1,1,0 },{ 0,0,1,0 },{ 0,0 } },
+{ { 1,-1, 0, 1 },{ 1,1,0,1 },{ 0,0,1,0 },{ 1,0 } },
+{ { 1, 1, 0, 1 },{ 1,0,1,1 },{ 0,0,1,0 },{ 1,1 } },
+{ { -1, 1, 0, 1 },{ 0,1,1,1 },{ 0,0,1,0 },{ 0,1 } } };
+
+const unsigned quad_tris[6] = { 0,1,2, 2,3,0 };
